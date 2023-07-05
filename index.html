@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form action="#" method="get" class="login-form">
+    <div>
+      <input type="text" placeholder="Write your name" class="login">
+      <button type="submit" class="login-btn">로그인</button>
+    </div>
+    <div class="error hidden"></div>
+  </form>
+
+  <div class="todo-app hidden">
+    <h1 class="greeting"></h1>
+    <form class="todo-form">
+      <div class="add-todo">
+        <input type="text" class="todo">
+        <button type="submit" class="todo-btn">추가</button>
+      </div>
+    </form>
+    <div class="container">
+      <div class="button-group">
+        <button type="button" onclick="filterAll()">ALL</button>
+        <button type="button" onclick="showCompleteTodo()">COMPLETE</button>
+        <button type="button" onclick="noneCompleteTodo()">NONE</button>
+      </div>
+      <ol class="todo-list">
+      </ol>
+    </div>
+  </div>
+  <script src="./greeting.js"></script>
+  <script src="./todo.js"></script>
+</body>
+</html>
